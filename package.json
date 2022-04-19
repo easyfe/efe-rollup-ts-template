@@ -1,5 +1,9 @@
 {
     "name": "@syyfe/m-xxxx",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org",
+        "access": "public"
+    },
     "version": "0.0.1",
     "description": "rollup空框架",
     "main": "lib/index.js",
