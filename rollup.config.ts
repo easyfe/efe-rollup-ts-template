@@ -1,8 +1,8 @@
 import path from "path";
 import pkg from "./package.json";
-import rollupTypescript from "rollup-plugin-typescript2";
+import rollupTypescript from "@rollup/plugin-typescript";
 import commonjs from "@rollup/plugin-commonjs";
-import { terser } from "rollup-plugin-terser";
+import terser from "@rollup/plugin-terser";
 import { babel } from "@rollup/plugin-babel";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import json from "@rollup/plugin-json";
@@ -51,5 +51,5 @@ export default {
         // 压缩文件
         terser()
     ],
-    external: []
+    external: [...Object.keys(require("./package.json").dependencies)]
 };
